@@ -14,7 +14,8 @@ namespace DataAccessLayer.Concrete.Repositories
         Context c = new Context();
         DbSet<T> _object;
 
-        public GenericRepository() //Objeye değer ataması yapabilmek için bir constructor oluşturdu. Sınıfı kendi içinde çağırma
+        //Objeye değer ataması yapabilmek için bir constructor oluşturdu. Sınıfı kendi içinde çağırma
+        public GenericRepository() 
         {
             _object = c.Set<T>();
         }
@@ -47,3 +48,4 @@ namespace DataAccessLayer.Concrete.Repositories
 
         }
     }
+}
